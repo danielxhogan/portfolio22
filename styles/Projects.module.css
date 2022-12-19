@@ -1,0 +1,73 @@
+.main {
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--red);
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.content > h1 {
+  margin-bottom: 50px;
+}
+
+.dev-section {
+  border: 1px solid var(--red);
+  width: 100%;
+  max-width: 800px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .content {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    width: 80%;
+    margin-left: 120px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .content {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    width: 60%;
+  }
+}
