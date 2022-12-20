@@ -1,0 +1,13 @@
+.main {
+  border: 1px solid var(--red);
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
