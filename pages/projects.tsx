@@ -6,16 +6,28 @@ import Head from 'next/head'
 import styles from '../styles/Projects.module.css'
 import mvplaylist from '../public/mvplaylist.png'
 
-export default function Projects() {
+const webDevProjects = [
+  {
+    key: 0,
+    projectTitle: 'mvplaylist',
+    projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
+    projectImage: mvplaylist
+  },
+  {
+    key: 1,
+    projectTitle: 'Schieffers Keezers',
+    projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
+    projectImage: mvplaylist
+  }
+]
 
-  const webDevProjects = [
-    {
-      key: 0,
-      projectTitle: 'mvplaylist',
-      projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
-      projectImage: mvplaylist
-    }
-  ]
+export const allProjects = [
+  ...webDevProjects,
+  ...webDevProjects
+]
+
+
+export default function Projects() {
 
   return (
     <>
@@ -26,23 +38,7 @@ export default function Projects() {
         <SideNav />
         <div className={styles['content']}>
           <h1>Projects</h1>
-
           <DevSection sectionTitle={'Web Dev'} projects={webDevProjects} />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-
-          <div className={styles['dev-section']}>
-            <h2>Web Dev</h2>
-          </div>
-          <div className={styles['dev-section']}>
-            <h2>Trading</h2>
-          </div>
-          <div className={styles['dev-section']}>
-            <h2>Desktop Dev</h2>
-          </div>
         </div>
       </main>
     </>
