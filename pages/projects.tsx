@@ -1,23 +1,31 @@
+import mvplaylist from '../public/mvplaylist.png'
+import styles from '../styles/Projects.module.css'
+
 import SideNav from '../components/SideNav'
 import DevSection from '../components/DevSection'
 
 import Head from 'next/head'
-
-import styles from '../styles/Projects.module.css'
-import mvplaylist from '../public/mvplaylist.png'
 
 const webDevProjects = [
   {
     key: 0,
     projectTitle: 'mvplaylist',
     projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
-    projectImage: mvplaylist
+    projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
+    projectImage: mvplaylist,
+    languages: '',
+    libraries: '',
+    githubLink: '',
   },
   {
     key: 1,
     projectTitle: 'Schieffers Keezers',
     projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
-    projectImage: mvplaylist
+    projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
+    projectImage: mvplaylist,
+    languages: '',
+    libraries: '',
+    githubLink: '',
   }
 ]
 
@@ -38,7 +46,8 @@ export default function Projects() {
         <SideNav />
         <div className={styles['content']}>
           <h1>Projects</h1>
-          <DevSection sectionTitle={'Web Dev'} projects={webDevProjects} />
+          <DevSection sectionTitle={'Web Development'} projects={webDevProjects} />
+          <DevSection sectionTitle={'Algorithmic Trading'} projects={webDevProjects} />
         </div>
       </main>
     </>
