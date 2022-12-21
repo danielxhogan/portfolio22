@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--red);
   height: 100%;
   width: 70%;
   margin: auto;
@@ -15,6 +14,7 @@
 
 .content > h1 {
   margin-bottom: 50px;
+  color: var(--red);
 }
 
 .dev-section {
@@ -25,7 +25,7 @@
 
 @media only screen and (max-width: 1800px) {
   .content {
-    width: 75%;
+    width: 85%;
   }
 }
 
@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 1300px) {
   .content {
-    width: 80%;
+    width: 85%;
     margin-left: 120px;
   }
 }
