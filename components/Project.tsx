@@ -9,8 +9,6 @@ import { StaticImageData } from 'next/image';
 const SHOWN = 'shown';
 const HIDDEN = 'hidden';
 
-type stringOrNull = String | null
-
 export interface IProject {
   key: React.Key,
   projectTitle: String,
@@ -18,7 +16,7 @@ export interface IProject {
   projectDescriptionFull: String,
   projectImage: StaticImageData,
   languages: String,
-  libraries: String,
+  librariesAndFramework: String,
   githubLink: String,
   siteLink?: String,
 }

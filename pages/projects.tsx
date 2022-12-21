@@ -14,7 +14,7 @@ const webDevProjects = [
     projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
     projectImage: mvplaylist,
     languages: '',
-    libraries: '',
+    librariesAndFramework: '',
     githubLink: '',
   },
   {
@@ -24,7 +24,7 @@ const webDevProjects = [
     projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
     projectImage: mvplaylist,
     languages: '',
-    libraries: '',
+    librariesAndFramework: '',
     githubLink: '',
   }
 ]
