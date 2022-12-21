@@ -1,9 +1,7 @@
+import styles from '../styles/DevSection.module.css'
+
 import Project from './Project';
 import { IProject } from './Project';
-
-import { StaticImageData } from 'next/image';
-
-import styles from '../styles/DevSection.module.css'
 
 interface IDevSectionProps {
   sectionTitle: String,
