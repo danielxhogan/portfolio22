@@ -14,6 +14,13 @@
   padding: 0;
 }
 
+@media only screen and (max-width: 500px) {
+  .hidden.toggle-container {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
 .shown.toggle-container {
   width: 230px;
   padding: 0 10px;
