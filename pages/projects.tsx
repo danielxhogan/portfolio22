@@ -10,21 +10,21 @@ const webDevProjects = [
   {
     key: 0,
     projectTitle: 'mvplaylist',
+    projectImage: mvplaylist,
     projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
     projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
-    projectImage: mvplaylist,
     languages: '',
-    librariesAndFramework: '',
+    librariesAndFrameworks: '',
     githubLink: '',
   },
   {
     key: 1,
     projectTitle: 'Schieffers Keezers',
+    projectImage: mvplaylist,
     projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
     projectDescriptionFull: 'Turn your Spotify playlist into a Youtube music video playlist.',
-    projectImage: mvplaylist,
     languages: '',
-    librariesAndFramework: '',
+    librariesAndFrameworks: '',
     githubLink: '',
   }
 ]

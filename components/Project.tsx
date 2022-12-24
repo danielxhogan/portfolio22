@@ -12,11 +12,12 @@ const HIDDEN = 'hidden';
 export interface IProject {
   key: React.Key,
   projectTitle: String,
+  projectImage: StaticImageData,
+  projectVideo?: String,
   projectDescription: String,
   projectDescriptionFull: String,
-  projectImage: StaticImageData,
   languages: String,
-  librariesAndFramework: String,
+  librariesAndFrameworks: String,
   githubLink: String,
   siteLink?: String,
 }
