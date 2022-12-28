@@ -92,6 +92,7 @@
     margin-top: 20px;
     line-height: 40px;
     font-size: 1.7rem;
+    white-space: pre-wrap;
 }
 
 .links {
