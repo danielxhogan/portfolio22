@@ -2,6 +2,7 @@ import mvplaylist from '../public/mvplaylist.png'
 import schieffersKeezers from '../public/schieffers-keezers.png'
 import cardCounterPro from '../public/card-counter-pro.png'
 import taTraderDashboard from '../public/ta-trader-dashboard.png'
+import taTrader from '../public/ta-trader.png'
 import styles from '../styles/Projects.module.css'
 
 import SideNav from '../components/SideNav'
@@ -102,7 +103,7 @@ const webDevProjects = [
     projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist.',
     projectDescriptionFull: mvplaylistProjectDescriptionFull,
     languages: 'Javascript, HTML, SASS',
-    librariesAndFrameworks: 'Next, React, Redux, NextAuth, Mongoose, Axios',
+    librariesAndFrameworks: 'Next, React, Redux, NextAuth, Mongoose',
     apis:'Spotify, Youtube',
     githubLink: 'https://github.com/danielxhogan/mvplaylist',
     siteLink: 'https://mvplaylist.vercel.app'
@@ -168,12 +169,11 @@ about the app. The Home page displays all the tables of data gathered in the dat
 allows the user to enter a stock ticker and search for data about that stock. The search feature uses \
 many of the same methods as the data scripts. It will search the News Api, calcluate sentiment, search \
 for any news of earnings reports, insider trading, ratings, or any other information that might be used \
-make trading decisions about the stock.\n \
+make trading decisions about the stock. It also includes an interactive stock chart for the stock using \
+the Trading View cdn.\n \
 '
 
 const taTraderDescriptionFull = ''
-
-const mdspDescriptionFull = ''
 
 const algoTradingProjects = [
   {
@@ -197,17 +197,6 @@ const algoTradingProjects = [
     librariesAndFrameworks: 'Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG',
     apis: 'Google Cloud Language, Alpaca Trade, Quiver Quant, Newsapi',
     githubLink: 'https://github.com/danielxhogan/ta-trader',
-  },
-  {
-    key: 6,
-    projectTitle: 'MDSP',
-    projectImage: taTraderDashboard,
-    projectDescription: 'Web app dashboard for TA Trader, displays finance data scraped from the web used for trading decisions by the TA Trader bot.',
-    projectDescriptionFull: mdspDescriptionFull,
-    languages: 'Python, Javascript, HTML, CSS, SQL',
-    librariesAndFrameworks: 'Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG',
-    apis: 'Google Cloud Language, Alpaca Trade, Quiver Quant, Newsapi',
-    githubLink: 'https://github.com/danielxhogan/ta-trader-dashboard',
   }
 ]
 
