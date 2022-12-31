@@ -139,7 +139,6 @@ const webDevProjects = [
     languages: 'Typescript, HTML, CSS',
     librariesAndFrameworks: 'Next, React',
     githubLink: 'https://github.com/danielxhogan/portfolio22',
-    siteLink: 'https://mvplaylist.vercel.app'
   }
 ]
 
