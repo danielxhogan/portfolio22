@@ -78,7 +78,20 @@ any time a 2 - 6 value card is dealt. It decreases the count by 1 any time a 10 
 is drawn. \
 '
 
-const portfolioDescriptionFull = ''
+const portfolioDescriptionFull = '\
+This website was made with Typescript, React, and Next.js. There is an IProject Typescript interface that \
+defines all the fields and types required for a project. All the data is stored in arrays of \
+IProjects seperated by category. On the projects page, each array is passed into a DevSection \
+component. The DevSection component takes the array and passes each element into a Project component \
+that displays the title, image, and short description. Then each array is concatenated together \
+using the spread operator and exported. It is imported by the project page which uses the \
+getStaticPaths and getStaticProps features of Next.js to build a unique page for each project in \
+the array using the ProjectPage component.\n\n Some of the projects also have a video demo. \
+I made the screen recordings using OBS, editied the videos using Blender, and then uploaded \
+the videos to my Youtube channel. Then I used an iframe html element to embed each video into the \
+project page for that video. The video field of the IProject interface is optional. The ProjectPage \
+component checks the prop it gets for a video field. If it doesn\'t find one, it just displays the image. \
+'
 
 const webDevProjects = [
   {
@@ -109,7 +122,6 @@ const webDevProjects = [
     key: 2,
     projectTitle: 'Card Counter PRO',
     projectImage: cardCounterPro,
-    // projectVideo: 'PcbKr5OWtM4',
     projectDescription: 'Black Jack simulator that teaches you to count cards',
     projectDescriptionFull: cardCounterPRODescriptionFull,
     languages: 'Javascript, HTML, CSS',
