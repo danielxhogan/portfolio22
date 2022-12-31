@@ -2,7 +2,7 @@ import mvplaylist from '../public/mvplaylist.png'
 import schieffersKeezers from '../public/schieffers-keezers.png'
 import cardCounterPro from '../public/card-counter-pro.png'
 import taTraderDashboard from '../public/ta-trader-dashboard.png'
-import taTrader from '../public/ta-trader.png'
+import taTrader from '../public/ta-trader.jpg'
 import styles from '../styles/Projects.module.css'
 
 import SideNav from '../components/SideNav'
@@ -173,14 +173,37 @@ make trading decisions about the stock. It also includes an interactive stock ch
 the Trading View cdn.\n \
 '
 
-const taTraderDescriptionFull = ''
+const taTraderDescriptionFull = '\
+Ta Trader is a python bot that can automate day trades of stocks and foreign exchange currencies. \
+It starts with the daily atr filter. This is a python script that reads in a csv file with 1500 stock \
+tickers. It then queries daily open, high, low, and close price data \
+for the last 15 days from the Alpaca Trade api which it recieves as a Pandas dataframe. It then passes \
+this data into the TA Lib library which calculates the Average Trading Range(ATR). This value will be used \
+to determine whether to trade the stock at all and used to determine a closing price target if a position \
+is opened on that stock. Then a filter will add the stock to an output list if the stock has a high enough \
+ATR, a low enough price, and a high enough volume. This list is output to another csv file which is read in \
+by the main trading script.\n\n The main trading script is run while the market is trading live and constantly \
+monitors each stock in the list. There are two loops, the main trading loop, and the loop that iterates over \
+each stock. At the beginning of the main trading loop, it checks the time and compares it to the time it \
+started running. This way the script can automatically turn itself off after a certain amount of time. \
+Then it checks the total portolio value and compares to the starting portfolio value. This way the script \
+can stop if its won or lost a certain percentage for the day. Then it checks current portfolio holdings. \
+This is so when it\'s looping over the stocks it will know for each stock whether it already owns that stock. \
+Then it starts looping over the stocks. For each stock it quries price data down to the minute. It passes that \
+data into TA Lib to calcluate various technical indicators. Then it passes that data to a signal function. \
+This function will either return a buy, sell, or close signal. If the stock is not already in the portfolio, \
+the function will check the indicators. If they indicate the price of the \
+stock will go up, it will buy, if they indicate the price will go down, it will short sell. If the stock is \
+already in the portfolio, it check the current price and the price the stock was bought at. If the current \
+profit or loss is at a certain percentage of the ATR, the script will close the position. \
+'
 
 const algoTradingProjects = [
   {
     key: 4,
     projectTitle: 'TA Trader Dashboard',
     projectImage: taTraderDashboard,
-    projectDescription: 'Full Stack stock trading system',
+    projectDescription: 'Full Stack trading system',
     projectDescriptionFull: taTraderDashboardDescriptionFull,
     languages: 'Python, Javascript, HTML, CSS, SQL',
     librariesAndFrameworks: 'Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG',
@@ -190,12 +213,12 @@ const algoTradingProjects = [
   {
     key: 5,
     projectTitle: 'TA Trader',
-    projectImage: taTraderDashboard,
-    projectDescription: 'Web app dashboard for TA Trader, displays finance data scraped from the web used for trading decisions by the TA Trader bot.',
+    projectImage: taTrader,
+    projectDescription: 'Trading bot makes buy/sell/close trading decisions using Technical Analysis indicators',
     projectDescriptionFull: taTraderDescriptionFull,
-    languages: 'Python, Javascript, HTML, CSS, SQL',
-    librariesAndFrameworks: 'Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG',
-    apis: 'Google Cloud Language, Alpaca Trade, Quiver Quant, Newsapi',
+    languages: 'Python',
+    librariesAndFrameworks: 'Pandas, Numpy, Ta-Lib',
+    apis: 'Alpaca Trade, Oanda Trade, Yahoo Finance',
     githubLink: 'https://github.com/danielxhogan/ta-trader',
   }
 ]
