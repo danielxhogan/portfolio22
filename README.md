@@ -1,6 +1,6 @@
 # My Portfolio
 
-[![IMAGE_ALT](public/portfolio.png)]
+![IMAGE_ALT](public/portfolio.png)
 
 This website was made with Typescript, React, and Next.js. There is an IProject Typescript interface that defines all the fields and types required for a project. All the data is stored in arrays of IProjects seperated by category. On the projects page, each array is passed into a DevSection component. The DevSection component takes the array and passes each element into a Project component that displays the title, image, and short description. Then each array is concatenated together using the spread operator and exported. It is imported by the project page which uses the getStaticPaths and getStaticProps features of Next.js to build a unique page for each project in the array using the ProjectPage component.
 
