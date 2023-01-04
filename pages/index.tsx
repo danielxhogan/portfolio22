@@ -15,7 +15,7 @@ export default function Home() {
       <main className={styles['main']}>
         <SideNav />
         <div className={styles['content']}>
-          <Image src={headshot} alt='wiley times' className={styles['profile-pic']} />
+          <Image src={headshot} alt='headshot' className={styles['profile-pic']} />
           <h1 className={styles['name']}>Daniel Hogan</h1>
           <h2>Software Developer</h2>
         </div>
