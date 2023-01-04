@@ -1,6 +1,7 @@
 import mvplaylist from '../public/mvplaylist.png'
 import schieffersKeezers from '../public/schieffers-keezers.png'
 import cardCounterPro from '../public/card-counter-pro.png'
+import portfolio from '../public/portfolio.png'
 import taTraderDashboard from '../public/ta-trader-dashboard.png'
 import taTrader from '../public/ta-trader.jpg'
 import styles from '../styles/Projects.module.css'
@@ -133,7 +134,7 @@ const webDevProjects = [
   {
     key: 3,
     projectTitle: 'Portfolio',
-    projectImage: mvplaylist,
+    projectImage: portfolio,
     projectDescription: 'My portfolio website',
     projectDescriptionFull: portfolioDescriptionFull,
     languages: 'Typescript, HTML, CSS',
