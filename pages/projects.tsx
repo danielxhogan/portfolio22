@@ -32,14 +32,14 @@ an object with the song id and the video id. \
 When the user clicks the YouTube icon next to a song, a YouTube \
 video player is embedded in the page with \
 the song the user chose. This way, a user can take any song in their existing Spotify \
-playlist and add a YouTube music video and make a music video playlist.\n \
+playlist and add a YouTube music video and make a music video playlist.\n\n \
 The site also features a dark theme and a light theme the users can toggle with a sun/moon icon \
 in the top header. If the screen goes below a certain \
 width, the video window is stacked on top of the playlist window and the video window is \
 collapsed if there is no video data to display. It only expands when the user searches \
 or plays a video. When using the app on mobile, screen real estate is limited so this feature \
 prevents wasted screen space. The user can also switch from one playlist to another using a pull out \
-sidenav bar. \
+sidenav bar. \n \
 '
 
 const schieffersKeezersProjectDescriptionFull = '\
@@ -74,7 +74,7 @@ The game constantly monitors the hand of the user and the dealer and makes a sug
 user on whether to hit, stay, double down, or split if possible. These suggestions are based on \
 basic strategy which is a statistically proven method of maximizing your chance of winning any \
 possible hand you can be dealt. Even when a player plays perfect basic strategy, however, they \
-only decrease the house edge to 0.5, meaning you will still lose on average.\n\n In order to deal \
+only decrease the house edge to 0.5%, meaning you will still lose on average.\n\n In order to deal \
 with this, the goal of counting cards is to ensure that even if the player loses more often \
 than they win, when they win, they win bigger. Counting cards determines the times when the player \
 is more likey to win or when the dealer is more likey to win. When the count is up, the player \
@@ -160,10 +160,10 @@ potentially cause a significant price shift such as earnings reports, news of me
 publically reported insider trading, politician buys and sells, and new ratings. They look for news \
 that breaks before market open or after market close. \
 Then they takes the most significant news events and \
-determine a sentiment score for the stock by taking all recent news articles about stock queried \
+determine a sentiment score for the stock by taking all recent news articles about the stock queried \
 from the News api and sending them to the Google Cloud Language api. \
 This helps determine if many people feel strongly about the stock.\n\n \
-The second part of the TA Trader Dashboard are the trading bots. They are Python bots that connect \
+The second part of the TA Trader Dashboard is the trading bots. They are Python bots that connect \
 to the Alpace Trade Api. Alpaca is a broker that provides a public api for account holders \
 to perform actions on their account. the bots can get stock price data down to the minute, check \
 current portfolio holdings, and place buy, sell, or close signals to open or close positions on stocks. \
@@ -181,7 +181,7 @@ the Trading View cdn.\n \
 '
 
 const taTraderDescriptionFull = '\
-Ta Trader is a python bot that can automate day trades of stocks and foreign exchange currencies. \
+TA Trader is a python bot that can automate day trades of stocks and foreign exchange currencies. \
 It starts with the daily atr filter. This is a python script that reads in a csv file with 1500 stock \
 tickers. It then queries daily open, high, low, and close price data \
 for the last 15 days from the Alpaca Trade api which it recieves as a Pandas dataframe. Alpaca is a stock \
@@ -194,18 +194,20 @@ by the main trading script.\n\n The main trading script is run while the market 
 monitors each stock in the list. There are two loops, the main trading loop, and the loop that iterates over \
 each stock. At the beginning of the main trading loop, it checks the time, \
 the total portolio value, and the current portfolio holdings. The time and portfolio value can be usesd to \
-automatically shut off the script. \
+automatically shut off the script, like right before the market closes, or if the bot is losing too much money. \
 The portfolio holdings are used so when it\'s looping over the stocks it will know for each stock whether \
  it already owns that stock. \
-Then it starts looping over the stocks. For each stock it quries price data down to the minute. It passes that \
+Then it starts looping over the stocks. For each stock it queries price data down to the minute. It passes that \
 data into TA Lib to calcluate various technical indicators. Then it passes that data to a signal function. \
-This function will either return a buy, sell, or close signal. If the stock is not already in the portfolio, \
+This function will either return a buy, sell, close, or null signal. If the stock is not already in the portfolio, \
 the function will check the indicators. If they indicate the price of the \
 stock will go up, it will buy, if they indicate the price will go down, it will short sell. If the stock is \
 already in the portfolio, it check the current price and the price the stock was bought at. If the current \
-profit or loss is at a certain percentage of the ATR, the script will close the position. \
+profit or loss is at a certain percentage of the ATR, the script will close the position. if none of these \
+conditions are met, a null signal is sent. \
 This signal is used to generate a network request that is sent to the Alpaca Trade api along with the api key \
 for my account and this way the script can make trading decisions automatically on behalf of my account. \
+If a null signal is revieved, no action is taken. \
 I also adapted the script to trade foreign exchange currencies using Oanda as the broker and connecting \
 to the Oanda api. \
 '
