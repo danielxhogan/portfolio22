@@ -96,7 +96,7 @@ that displays the title, image, and short description. Then each array is concat
 using the spread operator and exported. It is imported by the project page which uses the \
 getStaticPaths and getStaticProps features of Next.js to build a unique page for each project in \
 the array using the ProjectPage component.\n\n Some of the projects also have a video demo. \
-I made the screen recordings using OBS, editied the videos using Blender, and then uploaded \
+I made the screen recordings using OBS, edited the videos using Blender, and then uploaded \
 the videos to my Youtube channel. Then I used an iframe html element to embed each video into the \
 project page for that video. The video field of the IProject interface is optional. The ProjectPage \
 component checks the prop it gets for a video field. If it doesn\'t find one, it just displays the image. \
