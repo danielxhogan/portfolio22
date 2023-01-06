@@ -33,7 +33,7 @@ When the user clicks the YouTube icon next to a song, a YouTube \
 video player is embedded in the page with \
 the song the user chose. This way, a user can take any song in their existing Spotify \
 playlist and add a YouTube music video and make a music video playlist.\n\n \
-The site also features a dark theme and a light theme the users can toggle with a sun/moon icon \
+The site also features a dark theme and a light theme the user can toggle with a sun/moon icon \
 in the top header. If the screen goes below a certain \
 width, the video window is stacked on top of the playlist window and the video window is \
 collapsed if there is no video data to display. It only expands when the user searches \
