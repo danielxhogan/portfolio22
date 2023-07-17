@@ -54,8 +54,8 @@
 }
 
 .side-nav-item:hover {
-    color: var(--orange);
-    cursor: pointer;
+  color: var(--orange);
+  cursor: pointer;
 }
 
 .hidden.side-nav-item {

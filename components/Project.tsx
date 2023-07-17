@@ -1,87 +1,88 @@
-import styles from '../styles/Project.module.css'
+import styles from "../styles/Project.module.css";
 
-import { useState } from 'react';
-import Link from 'next/link'
-import Image from 'next/image'
-import { StaticImageData } from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
 
-
-const SHOWN = 'shown';
-const HIDDEN = 'hidden';
+const SHOWN = "shown";
+const HIDDEN = "hidden";
 
 export interface IProject {
-  key: React.Key,
-  projectTitle: String,
-  projectImage: StaticImageData,
-  projectVideo?: String,
-  projectDescription: String,
-  projectDescriptionFull: String,
-  languages: String,
-  librariesAndFrameworks: String,
-  apis?: String,
-  githubLink: string,
-  siteLink?: string,
+  key: React.Key;
+  projectTitle: String;
+  projectImage: StaticImageData;
+  projectVideo?: String;
+  projectDescription: String;
+  projectDescriptionFull: String;
+  languages: String;
+  librariesAndFrameworks: String;
+  apis?: String;
+  githubLink: string;
+  siteLink?: string;
 }
 
 interface IProjectProps {
-  project: IProject
+  project: IProject;
 }
 
 export default function Project({ project }: IProjectProps) {
-  const [ shownHidden, setShownHidden ] = useState(HIDDEN);
+  const [shownHidden, setShownHidden] = useState(HIDDEN);
 
   const onClickChevronBtn = () => {
     switch (shownHidden) {
-      case HIDDEN: setShownHidden(SHOWN); break;
-      case SHOWN: setShownHidden(HIDDEN); break;
+      case HIDDEN:
+        setShownHidden(SHOWN);
+        break;
+      case SHOWN:
+        setShownHidden(HIDDEN);
+        break;
     }
   };
   return (
-    <div className={styles['main']}>
-      <div className={styles['header']}>
-
+    <div className={styles["main"]}>
+      <div className={styles["header"]}>
         <Link href={`/project/${project.key}`}>
-          <h3>{ project.projectTitle }</h3>
+          <h3>{project.projectTitle}</h3>
         </Link>
 
         <div
           className={`
-            ${styles['chevron']}
+            ${styles["chevron"]}
             ${styles[shownHidden]}
           `}
           onClick={onClickChevronBtn}
-          >
-          <i className='fa-solid fa-angle-down' />
+        >
+          <i className="fa-solid fa-angle-down" />
         </div>
-
       </div>
       <Link href={`/project/${project.key}`}>
-      <div className={`
-        ${styles['content']}
+        <div
+          className={`
+        ${styles["content"]}
         ${styles[shownHidden]}
-        `}>
+        `}
+        >
+          <div className={styles["image"]}>
+            <Image
+              className={styles["large-image"]}
+              src={project.projectImage}
+              alt="mvplaylist"
+              height={200}
+            />
+            <Image
+              className={styles["small-image"]}
+              src={project.projectImage}
+              alt="mvplaylist"
+              height={100}
+            />
+          </div>
 
-        <div className={styles['image']}>
-          <Image
-            className={styles['large-image']}
-            src={project.projectImage}
-            alt='mvplaylist'
-            height={200}
-          />
-          <Image
-            className={styles['small-image']}
-            src={project.projectImage}
-            alt='mvplaylist'
-            height={100}
-          />
+          <div className={styles["description"]}>
+            <h4>{project.projectDescription}</h4>
+          </div>
         </div>
-
-        <div className={styles['description']}>
-          <h4>{ project.projectDescription }</h4>
-        </div>
-
-      </div>
       </Link>
     </div>
-  )
+  );
 }

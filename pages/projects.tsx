@@ -1,17 +1,18 @@
-import mvplaylist from '../public/mvplaylist.png'
-import schieffersKeezers from '../public/schieffers-keezers.png'
-import cardCounterPro from '../public/card-counter-pro.png'
-import portfolio from '../public/portfolio.png'
-import taTraderDashboard from '../public/ta-trader-dashboard.png'
-import taTrader from '../public/ta-trader.jpg'
-import styles from '../styles/Projects.module.css'
+import mvplaylist from "../public/mvplaylist.png";
+import schieffersKeezers from "../public/schieffers-keezers.png";
+import cardCounterPro from "../public/card-counter-pro.png";
+import portfolio from "../public/portfolio.png";
+import taTraderDashboard from "../public/ta-trader-dashboard.png";
+import taTrader from "../public/ta-trader.jpg";
+import styles from "../styles/Projects.module.css";
 
-import SideNav from '../components/SideNav'
-import DevSection from '../components/DevSection'
+import SideNav from "../components/SideNav";
+import DevSection from "../components/DevSection";
 
-import Head from 'next/head'
+import Head from "next/head";
 
-const mvplaylistProjectDescriptionFull = '\
+const mvplaylistProjectDescriptionFull =
+  "\
 mvplaylist is a web app that allows a user to login to their existing Spotify account, \
 view and play any song on any existing playlist, and add music videos from Youtube to \
 any song. When the user logs in, they are redirected \
@@ -40,35 +41,37 @@ collapsed if there is no video data to display. It only expands when the user se
 or plays a video. When using the app on mobile, screen real estate is limited so this feature \
 prevents wasted screen space. The user can also switch from one playlist to another using a pull out \
 sidenav bar. \n \
-'
+";
 
-const schieffersKeezersProjectDescriptionFull = '\
+const schieffersKeezersProjectDescriptionFull =
+  "\
 Schieffers Keezers is a prototype online ordering web app that allows potential customers \
 to order custom keezers from Schieffers Keezers, LLC. The customize page is broken up into \
 sections for each category of component needed for a full build. Each sections shows \
 all the available components for that category and the user can choose only one. The user \
-can add items to their cart as long as they are logged in.\n\n If they don\'t have an account, \
+can add items to their cart as long as they are logged in.\n\n If they don't have an account, \
 they can make one by clicking the register button. As long as they enter a unique \
 email, a password, and their first and last name, they can create an account. The password \
 is salted and hashed using bcrypt and stored in a postgreSQL database. In order to authenticate \
 a user, a jwt token is generated with a secret key, stored in an environment variable on the server, and \
-the users\'s unique id. The server uses this token to authenticate requests and indicate \
+the users's unique id. The server uses this token to authenticate requests and indicate \
 which user is sending the request. With an account, a user can add items to their \
 cart and view those items by clicking the cart button in the dropdown menu in the top right \
 corner that only appears when a user is logged in. The cart page shows all the \
-items in the users\'s cart along with the total price, allows them to delete items, and \
+items in the users's cart along with the total price, allows them to delete items, and \
 presents a link to the checkout page.\n\n The checkout page will show them the items in their \
-cart to confirm which items they are purchasing along with the total and the users\' address. \
-If the user doesn\'t have an address on file, or they are missing a freezer or a tapkit, \
+cart to confirm which items they are purchasing along with the total and the users' address. \
+If the user doesn't have an address on file, or they are missing a freezer or a tapkit, \
 a warining message is displayed. A freezer and a tapkit are the minimum required components \
 for a keezer build. The user can add or edit their address from the checkout page, or from \
 the account details page. There is also an admin page. The link is only visible if the user \
 logged in has a user_id that matches the value stored on the server. \
 If a user that is not the admin \
 attempts to access the admin page, they are redirected to the home page.\n \
-'
+";
 
-const cardCounterPRODescriptionFull = '\
+const cardCounterPRODescriptionFull =
+  "\
 Card Counter PRO is a Black Jack Game with features built in to help users learn how to count cards. \
 The game constantly monitors the hand of the user and the dealer and makes a suggestion to the \
 user on whether to hit, stay, double down, or split if possible. These suggestions are based on \
@@ -85,9 +88,10 @@ Low cards are generally considered better for the dealer. Therefore, when low ca
 count is increased. The game keeps track of the count, starting at 0 and increases the count by 1 \
 any time a 2 - 6 value card is dealt. It decreases the count by 1 any time a 10 value card or an ace \
 is drawn. \
-'
+";
 
-const portfolioDescriptionFull = '\
+const portfolioDescriptionFull =
+  "\
 This website was made with Typescript, React, and Next.js. There is an IProject Typescript interface that \
 defines all the fields and types required for a project. All the data is stored in arrays of \
 IProjects seperated by category. On the projects page, each array is passed into a DevSection \
@@ -99,59 +103,62 @@ the array using the ProjectPage component.\n\n Some of the projects also have a 
 I made the screen recordings using OBS, edited the videos using Blender, and then uploaded \
 the videos to my Youtube channel. Then I used an iframe html element to embed each video into the \
 project page for that video. The video field of the IProject interface is optional. The ProjectPage \
-component checks the prop it gets for a video field. If it doesn\'t find one, it just displays the image. \
-'
+component checks the prop it gets for a video field. If it doesn't find one, it just displays the image. \
+";
 
 const webDevProjects = [
   {
     key: 0,
-    projectTitle: 'mvplaylist',
+    projectTitle: "mvplaylist",
     projectImage: mvplaylist,
-    projectVideo: '70tjwO3O_Q4',
-    projectDescription: 'Turn your Spotify playlist into a Youtube music video playlist',
+    projectVideo: "70tjwO3O_Q4",
+    projectDescription:
+      "Turn your Spotify playlist into a Youtube music video playlist",
     projectDescriptionFull: mvplaylistProjectDescriptionFull,
-    languages: 'Javascript, HTML, SASS',
-    librariesAndFrameworks: 'Next, React, Redux, NextAuth, Mongoose',
-    apis:'Spotify, Youtube',
-    githubLink: 'https://github.com/danielxhogan/mvplaylist',
-    siteLink: 'https://mvplaylist.vercel.app'
+    languages: "Javascript, HTML, SASS",
+    librariesAndFrameworks: "Next, React, Redux, NextAuth, Mongoose",
+    apis: "Spotify, Youtube",
+    githubLink: "https://github.com/danielxhogan/mvplaylist",
+    siteLink: "https://mvplaylist.vercel.app"
   },
   {
     key: 1,
-    projectTitle: 'Schieffers Keezers',
+    projectTitle: "Schieffers Keezers",
     projectImage: schieffersKeezers,
-    projectVideo: 'PcbKr5OWtM4',
-    projectDescription: 'Ecommerce web app for ordering a custom built keezer from Schieffers Keezers, LLC',
+    projectVideo: "PcbKr5OWtM4",
+    projectDescription:
+      "Ecommerce web app for ordering a custom built keezer from Schieffers Keezers, LLC",
     projectDescriptionFull: schieffersKeezersProjectDescriptionFull,
-    languages: 'Javascript, HTML, CSS, SQL',
-    librariesAndFrameworks: 'React, React Router, Express, PG, jsonWebTokens, Bcrypt, Bootstrap',
-    githubLink: 'https://github.com/danielxhogan/schieffers-keezers',
+    languages: "Javascript, HTML, CSS, SQL",
+    librariesAndFrameworks:
+      "React, React Router, Express, PG, jsonWebTokens, Bcrypt, Bootstrap",
+    githubLink: "https://github.com/danielxhogan/schieffers-keezers"
   },
   {
     key: 2,
-    projectTitle: 'Card Counter PRO',
+    projectTitle: "Card Counter PRO",
     projectImage: cardCounterPro,
-    projectDescription: 'Black Jack simulator that teaches you to count cards',
+    projectDescription: "Black Jack simulator that teaches you to count cards",
     projectDescriptionFull: cardCounterPRODescriptionFull,
-    languages: 'Javascript, HTML, CSS',
-    librariesAndFrameworks: 'Bootstrap',
-    githubLink: 'https://github.com/danielxhogan/card-counter-pro',
-    siteLink: 'https://danielxhogan.github.io/card-counter-pro/'
+    languages: "Javascript, HTML, CSS",
+    librariesAndFrameworks: "Bootstrap",
+    githubLink: "https://github.com/danielxhogan/card-counter-pro",
+    siteLink: "https://danielxhogan.github.io/card-counter-pro/"
   },
   {
     key: 3,
-    projectTitle: 'Portfolio',
+    projectTitle: "Portfolio",
     projectImage: portfolio,
-    projectDescription: 'My portfolio website',
+    projectDescription: "My portfolio website",
     projectDescriptionFull: portfolioDescriptionFull,
-    languages: 'Typescript, HTML, CSS',
-    librariesAndFrameworks: 'Next, React',
-    githubLink: 'https://github.com/danielxhogan/portfolio22',
+    languages: "Typescript, HTML, CSS",
+    librariesAndFrameworks: "Next, React",
+    githubLink: "https://github.com/danielxhogan/portfolio22"
   }
-]
+];
 
-
-const taTraderDashboardDescriptionFull = '\
+const taTraderDashboardDescriptionFull =
+  "\
 There are three main parts to the TA Trader Dashboard. The first part is a series of python \
 scripts that use a combination of web scraping and api requests to collect financial data and \
 store it to a PostgreSQL database. The scripts are executed using \
@@ -178,14 +185,15 @@ many of the same methods as the data scripts. It will search the News Api, calcl
 for any news of earnings reports, insider trading, ratings, or any other information that might be used \
 make trading decisions about the stock. It also includes an interactive stock chart for the stock using \
 the Trading View cdn.\n \
-'
+";
 
-const taTraderDescriptionFull = '\
+const taTraderDescriptionFull =
+  "\
 TA Trader is a python bot that can automate day trades of stocks and foreign exchange currencies. \
 It starts with the daily atr filter. This is a python script that reads in a csv file with 1500 stock \
 tickers. It then queries daily open, high, low, and close price data \
 for the last 15 days from the Alpaca Trade api which it recieves as a Pandas dataframe. Alpaca is a stock \
-broker that provides a public api to it\'s users. It then passes \
+broker that provides a public api to it's users. It then passes \
 this data into the TA Lib library which calculates the Average Trading Range(ATR). This value will be used \
 to determine whether to trade the stock at all and used to determine a closing price target if a position \
 is opened on that stock. Then a filter will add the stock to an output list if the stock has a high enough \
@@ -195,7 +203,7 @@ monitors each stock in the list. There are two loops, the main trading loop, and
 each stock. At the beginning of the main trading loop, it checks the time, \
 the total portolio value, and the current portfolio holdings. The time and portfolio value can be usesd to \
 automatically shut off the script, like right before the market closes, or if the bot is losing too much money. \
-The portfolio holdings are used so when it\'s looping over the stocks it will know for each stock whether \
+The portfolio holdings are used so when it's looping over the stocks it will know for each stock whether \
  it already owns that stock. \
 Then it starts looping over the stocks. For each stock it queries price data down to the minute. It passes that \
 data into TA Lib to calcluate various technical indicators. Then it passes that data to a signal function. \
@@ -210,54 +218,57 @@ for my account and this way the script can make trading decisions automatically 
 If a null signal is revieved, no action is taken. \
 I also adapted the script to trade foreign exchange currencies using Oanda as the broker and connecting \
 to the Oanda api. \
-'
+";
 
 const algoTradingProjects = [
   {
     key: 4,
-    projectTitle: 'TA Trader Dashboard',
+    projectTitle: "TA Trader Dashboard",
     projectImage: taTraderDashboard,
-    projectDescription: 'Full Stack trading system',
+    projectDescription: "Full Stack trading system",
     projectDescriptionFull: taTraderDashboardDescriptionFull,
-    languages: 'Python, Javascript, HTML, CSS, SQL',
-    librariesAndFrameworks: 'Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG',
-    apis: 'Google Cloud Language, Alpaca Trade, Quiver Quant, Newsapi',
-    githubLink: 'https://github.com/danielxhogan/ta-trader-dashboard',
+    languages: "Python, Javascript, HTML, CSS, SQL",
+    librariesAndFrameworks:
+      "Flask, Pandas, Selenium, Beautiful Soup, psycopg2, React, React Router, Express, PG",
+    apis: "Google Cloud Language, Alpaca Trade, Quiver Quant, Newsapi",
+    githubLink: "https://github.com/danielxhogan/ta-trader-dashboard"
   },
   {
     key: 5,
-    projectTitle: 'TA Trader',
+    projectTitle: "TA Trader",
     projectImage: taTrader,
-    projectDescription: 'Trading bot makes buy/sell/close trading decisions using Technical Analysis indicators',
+    projectDescription:
+      "Trading bot makes buy/sell/close trading decisions using Technical Analysis indicators",
     projectDescriptionFull: taTraderDescriptionFull,
-    languages: 'Python',
-    librariesAndFrameworks: 'Pandas, Numpy, TA Lib',
-    apis: 'Alpaca Trade, Oanda Trade, Yahoo Finance',
-    githubLink: 'https://github.com/danielxhogan/ta-trader',
+    languages: "Python",
+    librariesAndFrameworks: "Pandas, Numpy, TA Lib",
+    apis: "Alpaca Trade, Oanda Trade, Yahoo Finance",
+    githubLink: "https://github.com/danielxhogan/ta-trader"
   }
-]
+];
 
-export const allProjects = [
-  ...webDevProjects,
-  ...algoTradingProjects
-]
-
+export const allProjects = [...webDevProjects, ...algoTradingProjects];
 
 export default function Projects() {
-
   return (
     <>
       <Head>
         <title>danielxhogan | projects</title>
       </Head>
-      <main className={styles['main']}>
+      <main className={styles["main"]}>
         <SideNav />
-        <div className={styles['content']}>
+        <div className={styles["content"]}>
           <h1>Projects</h1>
-          <DevSection sectionTitle={'Web Development'} projects={webDevProjects} />
-          <DevSection sectionTitle={'Algorithmic Trading'} projects={algoTradingProjects} />
+          <DevSection
+            sectionTitle={"Web Development"}
+            projects={webDevProjects}
+          />
+          <DevSection
+            sectionTitle={"Algorithmic Trading"}
+            projects={algoTradingProjects}
+          />
         </div>
       </main>
     </>
-  )
+  );
 }

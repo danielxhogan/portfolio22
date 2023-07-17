@@ -1,8 +1,8 @@
-import SideNav from '../components/SideNav'
+import SideNav from "../components/SideNav";
 
-import Head from 'next/head'
+import Head from "next/head";
 
-import styles from '../styles/Resume.module.css'
+import styles from "../styles/Resume.module.css";
 
 export default function Resume() {
   return (
@@ -10,9 +10,9 @@ export default function Resume() {
       <Head>
         <title>danielxhogan | resume</title>
       </Head>
-      <main className={styles['main']}>
+      <main className={styles["main"]}>
         <SideNav />
       </main>
     </>
-  )
+  );
 }

@@ -54,7 +54,7 @@
 }
 
 .image {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .small-image {
@@ -86,11 +86,11 @@
 }
 
 .project-info p {
-    /* width: 90%; */
-    margin-top: 20px;
-    line-height: 40px;
-    font-size: 1.7rem;
-    white-space: pre-wrap;
+  /* width: 90%; */
+  margin-top: 20px;
+  line-height: 40px;
+  font-size: 1.7rem;
+  white-space: pre-wrap;
 }
 
 .links {
