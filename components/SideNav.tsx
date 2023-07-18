@@ -36,12 +36,6 @@ export default function SideNav() {
     },
     {
       key: 1,
-      endpoint: "/projects",
-      icon: "fa-code",
-      label: "Projects"
-    },
-    {
-      key: 2,
       endpoint: "/resume",
       icon: "fa-file",
       label: "Resume"
