@@ -1,13 +1,12 @@
+import styles from "../styles/Home.module.css";
 import SideNav from "../components/SideNav";
 import headshot from "../public/good-if-rounded.jpg";
 
 import { useState } from "react";
 
 import Head from "next/head";
-import Image from "next/image";
-
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [message, setMessage] = useState("");
@@ -16,6 +15,7 @@ export default function Home() {
       <Head>
         <title>danielxhogan</title>
       </Head>
+
       <main className={styles["main"]}>
         <SideNav />
 
@@ -27,9 +27,11 @@ export default function Home() {
                 alt="headshot"
                 className={styles["profile-pic"]}
               />
+
               <div className={styles["name"]}>
                 <h1>Daniel Hogan</h1>
               </div>
+
               <h2>Software Engineer</h2>
             </div>
 
@@ -47,7 +49,7 @@ export default function Home() {
                 <a href="https://github.com/danielxhogan" target="__blank">
                   <i
                     className={`${styles["personal-icon"]} fa-brands fa-github`}
-                    onMouseOver={() => setMessage("view my github account")}
+                    onMouseOver={() => setMessage("go to my github account")}
                     onMouseOut={() => setMessage("")}
                   ></i>
                 </a>
@@ -55,7 +57,7 @@ export default function Home() {
                 <a href="https://linkedin.com/in/danielxhogan" target="__blank">
                   <i
                     className={`${styles["personal-icon"]} fa-brands fa-linkedin`}
-                    onMouseOver={() => setMessage("view my linkedin account")}
+                    onMouseOver={() => setMessage("go to my linkedin account")}
                     onMouseOut={() => setMessage("")}
                   ></i>
                 </a>
@@ -89,19 +91,24 @@ export default function Home() {
                   ></i>
                 </a>
 
-                <i
-                  className={`${styles["link"]} fa-brands fa-youtube`}
-                  onMouseOver={() => setMessage("watch the demo")}
-                  onMouseOut={() => setMessage("")}
-                ></i>
+                <a
+                  href="https://www.youtube.com/watch?v=5nCuNbf1WWw"
+                  target="__blank"
+                >
+                  <i
+                    className={`${styles["link"]} fa-brands fa-youtube`}
+                    onMouseOver={() => setMessage("watch the demo")}
+                    onMouseOut={() => setMessage("")}
+                  ></i>
+                </a>
 
-                {/* <Link href="/project/movieshlok"> */}
-                <i
-                  className={`${styles["link"]} fa-solid fa-circle-info`}
-                  onMouseOver={() => setMessage("see more info")}
-                  onMouseOut={() => setMessage("")}
-                ></i>
-                {/* </Link> */}
+                <Link href="/project/0">
+                  <i
+                    className={`${styles["link"]} fa-solid fa-circle-info`}
+                    onMouseOver={() => setMessage("see more info")}
+                    onMouseOut={() => setMessage("")}
+                  ></i>
+                </Link>
               </div>
             </div>
 
@@ -139,7 +146,7 @@ export default function Home() {
                   ></i>
                 </a>
 
-                <Link href="/project/0">
+                <Link href="/project/1">
                   <i
                     className={`${styles["link"]} fa-solid fa-circle-info`}
                     onMouseOver={() => setMessage("see more info")}

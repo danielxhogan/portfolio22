@@ -17,6 +17,7 @@ export interface IProject {
   projectDescriptionFull: String;
   languages: String;
   librariesAndFrameworks: String;
+  toolsAndTechnology?: String;
   apis?: String;
   githubLink: string;
   siteLink?: string;

@@ -102,6 +102,11 @@ export default function ProjectPage({ projectData }: IProjectPageProps) {
             <p>
               Libraries and Frameworks: {projectData.librariesAndFrameworks}
             </p>
+            {projectData.toolsAndTechnology ? (
+              <p>Tools and Technology: {projectData.toolsAndTechnology}</p>
+            ) : (
+              <></>
+            )}
             {projectData.apis ? <p>Apis: {projectData.apis}</p> : <></>}
 
             <div className={styles["links"]}>

@@ -11,25 +11,34 @@ import DevSection from "../components/DevSection";
 
 import Head from "next/head";
 
+const movieshlokProjectDescriptionFull =
+  "\
+Movieshlok is a website dedicated to cinema of all kinds, from kino to schlock, and everything \
+in between. It let's users search for and view details about movies and cast & crew members \
+using the TMDB api. They can create accounts and leave reviews of movies, or just read and \
+comment on reviews left by other users. They can view a list of all their own or another users' \
+reviews. They can like and rate movies on a 5 star rating scale. They can also add movies to \
+their watch list and view all movies on their own or other users' watch lists. \
+";
+
 const mvplaylistProjectDescriptionFull =
   "\
-mvplaylist is a web app that allows a user to login to their existing Spotify account, \
+Mvplaylist is a web app that allows a user to login to their existing Spotify account, \
 view and play any song on any existing playlist, and add music videos from Youtube to \
-any song. When the user logs in, they are redirected \
+any song. When a user clicks the login button, they are taken \
 to a Spotify log in page. If successful, the user is redirected to the playlists page \
-of mvplaylist. This page shows the user all their playlists from their Spotify \
+of the site. This page shows the user all their playlists from their Spotify \
 account and allows them to select a playlist. When they click on a playlist, \
-they are redirected to the mvplaylist/${playlistId} page.\n\n This page \
+they are redirected to the playlist details page.\n\n This page \
 displays all songs for the chosen playlist and lets the user play any song in the browser. \
 It also queries the mvplaylist database for any videos associated with \
 the playlist. When the page renders, any song with an associated music video will have a \
 YouTube icon displayed next to it. Each song is rendered with a search icon next to it. \
-When the button is clicked, a \
-search query is formed out of the song title and artist name and sent to the YouTube api. \
-The first five results are displayed to the user with radio buttons next to them. The user \
-can select a video and click the add video button or click cancel. If the user clicks add \
-video, a record is created in the database that stores \
-an object with the song id and the video id. \
+When clicked, a \
+search query is sent to the YouTube api. \
+The first five results are displayed to the user. If the user \
+selects a video and clicks the 'add video' button, a record is created in the database that stores \
+the association between the song searched for and the video selected. \
 When the user clicks the YouTube icon next to a song, a YouTube \
 video player is embedded in the page with \
 the song the user chose. This way, a user can take any song in their existing Spotify \
@@ -109,6 +118,20 @@ component checks the prop it gets for a video field. If it doesn't find one, it 
 const webDevProjects = [
   {
     key: 0,
+    projectTitle: "movieshlok",
+    projectImage: mvplaylist,
+    projectVideo: "5nCuNbf1WWw",
+    projectDescription: "from kino to schlock and everything in between",
+    projectDescriptionFull: movieshlokProjectDescriptionFull,
+    languages: "Typescript, HTML, CSS, Rust, SQL",
+    librariesAndFrameworks: "Next, React, Redux, Warp, Diesel",
+    toolsAndTechnology: "PostgreSQL, Docker, Postman, DigitalOcean",
+    apis: "TMDB api",
+    githubLink: "https://github.com/danielxhogan/movieshlok",
+    siteLink: "http://movieshlok.com"
+  },
+  {
+    key: 1,
     projectTitle: "mvplaylist",
     projectImage: mvplaylist,
     projectVideo: "70tjwO3O_Q4",
@@ -122,7 +145,7 @@ const webDevProjects = [
     siteLink: "https://mvplaylist.vercel.app"
   },
   {
-    key: 1,
+    key: 2,
     projectTitle: "Schieffers Keezers",
     projectImage: schieffersKeezers,
     projectVideo: "PcbKr5OWtM4",
@@ -135,7 +158,7 @@ const webDevProjects = [
     githubLink: "https://github.com/danielxhogan/schieffers-keezers"
   },
   {
-    key: 2,
+    key: 3,
     projectTitle: "Card Counter PRO",
     projectImage: cardCounterPro,
     projectDescription: "Black Jack simulator that teaches you to count cards",
@@ -146,7 +169,7 @@ const webDevProjects = [
     siteLink: "https://danielxhogan.github.io/card-counter-pro/"
   },
   {
-    key: 3,
+    key: 4,
     projectTitle: "Portfolio",
     projectImage: portfolio,
     projectDescription: "My portfolio website",
@@ -222,7 +245,7 @@ to the Oanda api. \
 
 const algoTradingProjects = [
   {
-    key: 4,
+    key: 5,
     projectTitle: "TA Trader Dashboard",
     projectImage: taTraderDashboard,
     projectDescription: "Full Stack trading system",
@@ -234,7 +257,7 @@ const algoTradingProjects = [
     githubLink: "https://github.com/danielxhogan/ta-trader-dashboard"
   },
   {
-    key: 5,
+    key: 6,
     projectTitle: "TA Trader",
     projectImage: taTrader,
     projectDescription:

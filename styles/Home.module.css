@@ -40,7 +40,6 @@
 }
 
 .bio p {
-  /* color: var(--neon-blue); */
   text-shadow: 2px 2px 4px var(--purple);
 }
 
@@ -67,10 +66,9 @@
 
 .message {
   background-color: black;
-  width: 800px;
   padding: 5px;
   height: 35px;
-  width: 400px;
+  max-width: 400px;
   margin: 50px var(--icon-width) 10px;
   color: var(--red);
   font-size: 1.3rem;
@@ -104,9 +102,6 @@
 .icons {
   display: flex;
   gap: 30px;
-}
-.movieshlok {
-  /* margin-bottom: 20px; */
 }
 
 .mvplaylist {
