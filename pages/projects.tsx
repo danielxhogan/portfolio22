@@ -124,7 +124,8 @@ const webDevProjects = [
     projectDescription: "from kino to schlock and everything in between",
     projectDescriptionFull: movieshlokProjectDescriptionFull,
     languages: "Typescript, HTML, CSS, Rust, SQL",
-    librariesAndFrameworks: "Next, React, Redux, Warp, Diesel",
+    librariesAndFrameworks:
+      "Next, React, Redux toolkit, ChakraUI, Warp, Diesel, Jwt, Bcrypt",
     toolsAndTechnology: "PostgreSQL, Docker, Postman, DigitalOcean",
     apis: "TMDB api",
     githubLink: "https://github.com/danielxhogan/movieshlok",
