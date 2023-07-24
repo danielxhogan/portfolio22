@@ -1,3 +1,4 @@
+import movieshlok from "../public/movieshlok.png";
 import mvplaylist from "../public/mvplaylist.png";
 import schieffersKeezers from "../public/schieffers-keezers.png";
 import cardCounterPro from "../public/card-counter-pro.png";
@@ -119,7 +120,7 @@ const webDevProjects = [
   {
     key: 0,
     projectTitle: "movieshlok",
-    projectImage: mvplaylist,
+    projectImage: movieshlok,
     projectVideo: "5nCuNbf1WWw",
     projectDescription: "from kino to schlock and everything in between",
     projectDescriptionFull: movieshlokProjectDescriptionFull,
