@@ -37,12 +37,13 @@ export default function Home() {
 
             <div className={styles["bio"]}>
               <p>
-                I&apos;ve been programming for 4 years. I have a Bachelors in
-                Computer Science and I&apos;m a pretty good web developer. I use
-                Typescript, React, Redux, & Next, and recently I started using
-                Rust by the way. If you want to see what I can do, check out one
-                of the projects below. You can also check out my Github or
-                Linkedin account.
+                Hi, my name is Daniel Hogan and I am a Software Engineer.
+                I&apos;ve been programming for 4 years. I have a Bachelors
+                Degree in Computer Science and I&apos;m a pretty good web
+                developer. I use Typescript, React, Redux, & Next, and recently
+                I started using Rust by the way. If you want to see what I can
+                do, check out one of the projects below. You can also check out
+                my Github or Linkedin account.
               </p>
 
               <div className={styles["personal-icons"]}>
