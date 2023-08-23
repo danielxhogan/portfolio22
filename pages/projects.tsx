@@ -127,7 +127,7 @@ const webDevProjects = [
     languages: "Typescript, HTML, CSS, Rust, SQL",
     librariesAndFrameworks:
       "Next, React, Redux toolkit, ChakraUI, Warp, Diesel, Jwt, Bcrypt",
-    toolsAndTechnology: "PostgreSQL, Docker, Postman, DigitalOcean",
+    toolsAndTechnology: "PostgreSQL, Redis, Docker, Postman, DigitalOcean",
     apis: "TMDB api",
     githubLink: "https://github.com/danielxhogan/movieshlok",
     siteLink: "http://movieshlok.com"
