@@ -1,10 +1,12 @@
 .resume {
-  width: 100%;
+  width: 900px;
   height: 110vh;
-  padding: 50px 0 0 300px;
+  margin: 50px 0 0 150px;
+  /* padding: 50px 0 0 0; */
   border: none;
 }
 
+/*
 @media (max-width: 1400px) {
   .resume {
     padding: 50px 50px 0 150px;
@@ -13,7 +15,7 @@
 
 @media (max-width: 1000px) {
   .resume {
-    height: 120vh;
+    height: 220vh;
   }
 }
 
@@ -46,4 +48,4 @@
   .resume {
     height: 250vh;
   }
-}
+} */

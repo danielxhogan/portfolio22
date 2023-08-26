@@ -28,15 +28,15 @@ export default function SideNav() {
   }
 
   const pages = [
-    {
-      key: 0,
-      endpoint: "/",
-      icon: "fa-house-chimney",
-      label: "Home"
-    },
+    // {
+    //   key: 0,
+    //   endpoint: "/",
+    //   icon: "fa-house-chimney",
+    //   label: "Home"
+    // },
     {
       key: 1,
-      endpoint: "/resume",
+      endpoint: "https://github.com/danielxhogan/resume",
       icon: "fa-file",
       label: "Resume"
     }
@@ -45,7 +45,7 @@ export default function SideNav() {
   const renderPages = (pages: IPage[]) => {
     return pages.map(page => {
       return (
-        <Link key={page.key} href={`${page.endpoint}`}>
+        <Link key={page.key} href={`${page.endpoint}`} target="_blank">
           <div
             className={`
             ${styles["side-nav-item"]}
@@ -82,7 +82,23 @@ export default function SideNav() {
         >
           <i className="fa-solid fa-angle-right" />
         </div>
+
         {renderPages(pages)}
+
+        {/* <div
+          className={`
+            ${styles["side-nav-item"]}
+            ${styles[shownHidden]}
+          `}
+          onClick={() => setShownHidden(HIDDEN)}
+        >
+          <div className={styles["page-icon"]}>
+            <i className={`fa-solid fa-2x fa-file`}></i>
+          </div>
+          <div className={styles["page-label"]}>
+            <h2>Resume</h2>
+          </div>
+        </div> */}
         <div
           className={`
           ${styles["page-buttons"]}

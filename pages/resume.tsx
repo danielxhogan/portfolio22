@@ -10,8 +10,10 @@ export default function Resume() {
       <Head>
         <title>danielxhogan | resume</title>
       </Head>
+
       <main className={styles["main"]}>
         <SideNav />
+
         <iframe
           className={styles["resume"]}
           src="https://docs.google.com/document/d/e/2PACX-1vSYC1KqAKnVP2hrhIDmdIMxZ4GBe5ynnFu0cBpOVMOZpHte_IxT7-kaJd-urPy4CA/pub?embedded=true"
